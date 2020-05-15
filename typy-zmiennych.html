@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pl-PL" xml:lang="pl-PL">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Typy zmiennych | Skrypt_dla_poczatkujacych._Poznaj_C_w_ciagu_kilku_godzin.utf8</title>
+  <meta name="description" content="Skrypt dla początkujących<br />
+<strong>Poznaj C w ciągu kilku godzin</strong></div>" />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Typy zmiennych | Skrypt_dla_poczatkujacych._Poznaj_C_w_ciagu_kilku_godzin.utf8" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Typy zmiennych | Skrypt_dla_poczatkujacych._Poznaj_C_w_ciagu_kilku_godzin.utf8" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="wprowadzenie-do-c.html"/>
+<link rel="next" href="sta-e-ang-constants.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="wprowadzenie-do-c.html"><a href="wprowadzenie-do-c.html"><i class="fa fa-check"></i><b>1</b> Wprowadzenie do C</a></li>
+<li class="chapter" data-level="2" data-path="typy-zmiennych.html"><a href="typy-zmiennych.html"><i class="fa fa-check"></i><b>2</b> Typy zmiennych</a><ul>
+<li class="chapter" data-level="2.1" data-path="typy-zmiennych.html"><a href="typy-zmiennych.html#zmienne-typu-całkowitego-ang.-integer-numbers"><i class="fa fa-check"></i><b>2.1</b> Zmienne typu całkowitego (ang. integer numbers)</a></li>
+<li class="chapter" data-level="2.2" data-path="typy-zmiennych.html"><a href="typy-zmiennych.html#kwalifikator-unsigned"><i class="fa fa-check"></i><b>2.2</b> Kwalifikator <code>unsigned</code></a></li>
+<li class="chapter" data-level="2.3" data-path="typy-zmiennych.html"><a href="typy-zmiennych.html#problem-przepełnienia-ang.-overflow"><i class="fa fa-check"></i><b>2.3</b> Problem przepełnienia (ang. overflow)</a></li>
+<li class="chapter" data-level="2.4" data-path="typy-zmiennych.html"><a href="typy-zmiennych.html#ostrzeżenia-ang.-warnings-kompilatora-spowodowane-niejawną-konwersją-ang.-implicit-conversion"><i class="fa fa-check"></i><b>2.4</b> Ostrzeżenia (ang. warnings) kompilatora spowodowane niejawną konwersją (ang. implicit conversion)</a></li>
+<li class="chapter" data-level="2.5" data-path="typy-zmiennych.html"><a href="typy-zmiennych.html#liczby-zmiennoprzecinkowe-ang.-floating-point-numbers"><i class="fa fa-check"></i><b>2.5</b> Liczby zmiennoprzecinkowe (ang. floating point numbers)</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sta-e-ang-constants.html"><a href="sta-e-ang-constants.html"><i class="fa fa-check"></i><b>3</b> Stałe (ang. constants)</a></li>
+<li class="chapter" data-level="4" data-path="operatory.html"><a href="operatory.html"><i class="fa fa-check"></i><b>4</b> Operatory</a><ul>
+<li class="chapter" data-level="4.1" data-path="operatory.html"><a href="operatory.html#operatory-arytmetyczne"><i class="fa fa-check"></i><b>4.1</b> Operatory arytmetyczne</a></li>
+<li class="chapter" data-level="4.2" data-path="operatory.html"><a href="operatory.html#operatory-relacji"><i class="fa fa-check"></i><b>4.2</b> Operatory relacji</a></li>
+<li class="chapter" data-level="4.3" data-path="operatory.html"><a href="operatory.html#operatory-logiczne"><i class="fa fa-check"></i><b>4.3</b> Operatory logiczne</a></li>
+<li class="chapter" data-level="4.4" data-path="operatory.html"><a href="operatory.html#złożone-operatory-przypisania"><i class="fa fa-check"></i><b>4.4</b> Złożone operatory przypisania</a></li>
+<li class="chapter" data-level="4.5" data-path="operatory.html"><a href="operatory.html#operator-trójoperandowy-ang.-ternary-operator"><i class="fa fa-check"></i><b>4.5</b> Operator trójoperandowy (ang. ternary operator)</a></li>
+<li class="chapter" data-level="4.6" data-path="operatory.html"><a href="operatory.html#sizeof"><i class="fa fa-check"></i><b>4.6</b> <code>sizeof</code></a></li>
+<li class="chapter" data-level="4.7" data-path="operatory.html"><a href="operatory.html#priorytety-operatorów"><i class="fa fa-check"></i><b>4.7</b> Priorytety operatorów</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="instrukcje-warunkowe-ang-conditionals.html"><a href="instrukcje-warunkowe-ang-conditionals.html"><i class="fa fa-check"></i><b>5</b> Instrukcje warunkowe (ang. conditionals)</a><ul>
+<li class="chapter" data-level="5.1" data-path="instrukcje-warunkowe-ang-conditionals.html"><a href="instrukcje-warunkowe-ang-conditionals.html#if"><i class="fa fa-check"></i><b>5.1</b> <code>if</code></a></li>
+<li class="chapter" data-level="5.2" data-path="instrukcje-warunkowe-ang-conditionals.html"><a href="instrukcje-warunkowe-ang-conditionals.html#switch"><i class="fa fa-check"></i><b>5.2</b> <code>switch</code></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="p-tle-ang-loops.html"><a href="p-tle-ang-loops.html"><i class="fa fa-check"></i><b>6</b> Pętle (ang. loops)</a><ul>
+<li class="chapter" data-level="6.1" data-path="p-tle-ang-loops.html"><a href="p-tle-ang-loops.html#pętla-for"><i class="fa fa-check"></i><b>6.1</b> Pętla <code>for</code></a></li>
+<li class="chapter" data-level="6.2" data-path="p-tle-ang-loops.html"><a href="p-tle-ang-loops.html#pętla-while"><i class="fa fa-check"></i><b>6.2</b> Pętla <code>while</code></a></li>
+<li class="chapter" data-level="6.3" data-path="p-tle-ang-loops.html"><a href="p-tle-ang-loops.html#pętla-do-while"><i class="fa fa-check"></i><b>6.3</b> Pętla <code>do while</code></a></li>
+<li class="chapter" data-level="6.4" data-path="p-tle-ang-loops.html"><a href="p-tle-ang-loops.html#instrukcja-break"><i class="fa fa-check"></i><b>6.4</b> Instrukcja <code>break</code></a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="tablice-ang-arrays.html"><a href="tablice-ang-arrays.html"><i class="fa fa-check"></i><b>7</b> Tablice (ang. arrays)</a></li>
+<li class="chapter" data-level="8" data-path="tekstowy-typ-danych-ang-string.html"><a href="tekstowy-typ-danych-ang-string.html"><i class="fa fa-check"></i><b>8</b> Tekstowy typ danych (ang. string)</a></li>
+<li class="chapter" data-level="9" data-path="wska-niki-ang-pointers.html"><a href="wska-niki-ang-pointers.html"><i class="fa fa-check"></i><b>9</b> Wskaźniki (ang. pointers)</a></li>
+<li class="chapter" data-level="10" data-path="funkcje-ang-functions.html"><a href="funkcje-ang-functions.html"><i class="fa fa-check"></i><b>10</b> Funkcje (ang. functions)</a></li>
+<li class="chapter" data-level="11" data-path="operacje-wej-ciawyj-cia-ang-inputoutput-operations.html"><a href="operacje-wej-ciawyj-cia-ang-inputoutput-operations.html"><i class="fa fa-check"></i><b>11</b> Operacje wejścia/wyjścia (ang. Input/Output operations)</a><ul>
+<li class="chapter" data-level="11.1" data-path="operacje-wej-ciawyj-cia-ang-inputoutput-operations.html"><a href="operacje-wej-ciawyj-cia-ang-inputoutput-operations.html#printf"><i class="fa fa-check"></i><b>11.1</b> <code>printf()</code></a></li>
+<li class="chapter" data-level="11.2" data-path="operacje-wej-ciawyj-cia-ang-inputoutput-operations.html"><a href="operacje-wej-ciawyj-cia-ang-inputoutput-operations.html#scanf"><i class="fa fa-check"></i><b>11.2</b> <code>scanf()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="operacje-na-plikach.html"><a href="operacje-na-plikach.html"><i class="fa fa-check"></i><b>12</b> Operacje na plikach</a><ul>
+<li class="chapter" data-level="12.1" data-path="operacje-na-plikach.html"><a href="operacje-na-plikach.html#fprintf"><i class="fa fa-check"></i><b>12.1</b> <code>fprintf()</code></a></li>
+<li class="chapter" data-level="12.2" data-path="operacje-na-plikach.html"><a href="operacje-na-plikach.html#fgetc"><i class="fa fa-check"></i><b>12.2</b> <code>fgetc()</code></a></li>
+<li class="chapter" data-level="12.3" data-path="operacje-na-plikach.html"><a href="operacje-na-plikach.html#fputc"><i class="fa fa-check"></i><b>12.3</b> <code>fputc()</code></a></li>
+<li class="chapter" data-level="12.4" data-path="operacje-na-plikach.html"><a href="operacje-na-plikach.html#operacje-na-plikach-binarnych"><i class="fa fa-check"></i><b>12.4</b> Operacje na plikach binarnych</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="zakres-zmiennych-ang-variable-scope.html"><a href="zakres-zmiennych-ang-variable-scope.html"><i class="fa fa-check"></i><b>13</b> Zakres zmiennych (ang. variable scope)</a></li>
+<li class="chapter" data-level="14" data-path="zmienne-statyczne-ang-static-variables.html"><a href="zmienne-statyczne-ang-static-variables.html"><i class="fa fa-check"></i><b>14</b> Zmienne statyczne (ang. static variables)</a></li>
+<li class="chapter" data-level="15" data-path="zmienne-globalne-ang-global-variables.html"><a href="zmienne-globalne-ang-global-variables.html"><i class="fa fa-check"></i><b>15</b> Zmienne globalne (ang. global variables)</a></li>
+<li class="chapter" data-level="16" data-path="definicje-typów-ang-type-definitions.html"><a href="definicje-typów-ang-type-definitions.html"><i class="fa fa-check"></i><b>16</b> Definicje typów (ang. type definitions)</a></li>
+<li class="chapter" data-level="17" data-path="wyliczeniowy-typ-danych-ang-enumerated-type.html"><a href="wyliczeniowy-typ-danych-ang-enumerated-type.html"><i class="fa fa-check"></i><b>17</b> Wyliczeniowy typ danych (ang. enumerated type)</a></li>
+<li class="chapter" data-level="18" data-path="struktury-ang-structures.html"><a href="struktury-ang-structures.html"><i class="fa fa-check"></i><b>18</b> Struktury (ang. structures)</a></li>
+<li class="chapter" data-level="19" data-path="parametry-wiersza-polece-ang-command-line-parameters.html"><a href="parametry-wiersza-polece-ang-command-line-parameters.html"><i class="fa fa-check"></i><b>19</b> Parametry wiersza poleceń (ang. command line parameters)</a></li>
+<li class="chapter" data-level="20" data-path="pliki-nag-ówkowe-ang-header-files.html"><a href="pliki-nag-ówkowe-ang-header-files.html"><i class="fa fa-check"></i><b>20</b> Pliki nagłówkowe (ang. header files)</a></li>
+<li class="chapter" data-level="21" data-path="preprocesor.html"><a href="preprocesor.html"><i class="fa fa-check"></i><b>21</b> Preprocesor</a><ul>
+<li class="chapter" data-level="21.1" data-path="preprocesor.html"><a href="preprocesor.html#kompilacja-warunkowa-ang.-conditional-compilation"><i class="fa fa-check"></i><b>21.1</b> Kompilacja warunkowa (ang. conditional compilation)</a></li>
+<li class="chapter" data-level="21.2" data-path="preprocesor.html"><a href="preprocesor.html#definicje"><i class="fa fa-check"></i><b>21.2</b> Definicje</a></li>
+<li class="chapter" data-level="21.3" data-path="preprocesor.html"><a href="preprocesor.html#makra"><i class="fa fa-check"></i><b>21.3</b> Makra</a></li>
+<li class="chapter" data-level="21.4" data-path="preprocesor.html"><a href="preprocesor.html#ifdef"><i class="fa fa-check"></i><b>21.4</b> <code>#ifdef</code></a></li>
+<li class="chapter" data-level="21.5" data-path="preprocesor.html"><a href="preprocesor.html#predefiniowane-stałe-symboliczne-ang.-predefined-symbolic-constants"><i class="fa fa-check"></i><b>21.5</b> Predefiniowane stałe symboliczne (ang. predefined symbolic constants)</a></li>
+</ul></li>
+<li class="chapter" data-level="22" data-path="unie-ang-unions.html"><a href="unie-ang-unions.html"><i class="fa fa-check"></i><b>22</b> Unie (ang. unions)</a></li>
+<li class="chapter" data-level="23" data-path="pola-bitowe-ang-bit-fields.html"><a href="pola-bitowe-ang-bit-fields.html"><i class="fa fa-check"></i><b>23</b> Pola bitowe (ang. bit fields)</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><div class="line-block"><strong>Skrypt dla początkujących</strong><br />
+<strong>Poznaj C w ciągu kilku godzin</strong></div></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="typy-zmiennych" class="section level1">
+<h1><span class="header-section-number">2</span> Typy zmiennych</h1>
+<p>C to język statycznie typowany co oznacza, że każda zmienna jest określonego typu i jest on znany w czasie kompilacji, w przeciwieństwie do pracy ze zmiennymi w Pythonie, JavaScript, PHP i innymi interpretowanymi językami.</p>
+<p>Podczas ustalania zmiennej w C musisz określić typ zmiennej.</p>
+<p>W poniższym przykładzie inicjujemy zmienną <code>age</code> o typie <code>int</code>:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb6-1" title="1"><span class="dt">int</span> age;</a></code></pre></div>
+<p>Nazwa zmiennej może zawierać dowolną wielką lub małą literę, znaki podkreślenia i cyfry, ale nie może zaczynać się od cyfr. Przykładowo <code>AGE</code> i <code>Age10</code> są poprawnymi nazwami zmiennych, natomiast <code>1age</code> już nie.</p>
+<p>Możesz także zainicjować zmienną podczas jej deklaracji określając wartość początkową:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb7-1" title="1"><span class="dt">int</span> age = <span class="dv">37</span>;</a></code></pre></div>
+<p>Po zadeklarowaniu zmiennej można jej używać w dalszym kodzie programu.
+Można zmieniać jej wartość w dowolnym momencie, używając na przykład operatora <code>=</code>, przykładowo <code>age = 100;</code> (pod warunkiem, że nowa wartość jest tego samego typu).</p>
+<p>Dlatego w poniższym przykładzie:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb8-1" title="1"><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></a>
+<a class="sourceLine" id="cb8-2" title="2"></a>
+<a class="sourceLine" id="cb8-3" title="3"><span class="dt">int</span> main(<span class="dt">void</span>) {</a>
+<a class="sourceLine" id="cb8-4" title="4">    <span class="dt">int</span> age = <span class="dv">0</span>;</a>
+<a class="sourceLine" id="cb8-5" title="5">    age = <span class="fl">37.2</span>;</a>
+<a class="sourceLine" id="cb8-6" title="6">    printf(<span class="st">&quot;%u&quot;</span>, age);</a>
+<a class="sourceLine" id="cb8-7" title="7">}</a></code></pre></div>
+<p>kompilator wyświetli ostrzeżenie w czasie kompilacji i skonwertuje liczbę dziesiętną na wartość całkowitą.</p>
+<p>Wbudowane typy danych w języku C to <code>int</code>, <code>char</code>, <code>short</code>, <code>long</code>, <code>float</code>, <code>double</code>, <code>long</code> i <code>double</code>.
+Dowiemy się o nich więcej w kolejnych rozdziałach.</p>
+<p>W tym momencie nie przejmuj się jeszcze znaczeniem <code>%u</code>. Jest to formatowanie podanego argumentu i zostanie to wyjaśnione później.</p>
+<div id="zmienne-typu-całkowitego-ang.-integer-numbers" class="section level2">
+<h2><span class="header-section-number">2.1</span> Zmienne typu całkowitego (ang. integer numbers)</h2>
+<p>C zapewnia nam następujące typy zmiennych całkowitych:</p>
+<ul>
+<li><code>char</code></li>
+<li><code>int</code></li>
+<li><code>short</code></li>
+<li><code>long</code></li>
+</ul>
+<p>W czasie kodowania w większości będziesz używał <code>int</code> do przechowywania liczb całkowitych.
+W pewnych przypadkach wybierzesz jednen z pozostałych typów.</p>
+<p>Typ <code>char</code> jest powszechnie używany do przechowywania liter w kodowaniu ASCII. Równie dobrze sprawdza się dla liczb całkowitych, których użycie zawiera się w zakresie od <span class="math inline">\(-128\)</span> do <span class="math inline">\(127\)</span> (np. w arduino, nie ma to jednak większego sensu dla komputerów stacjonarnych). Zajmuje przestrzeń co najmniej 1 bajtu.
+Natomiast <code>int</code> zajmuje co najmniej 2 bajty, <code>short</code> zajmuje co najmniej 2 bajty, <code>long</code> zajmuje co najmniej 4 bajty.</p>
+<p>Jak widać po tym opisie, nie ma gwarancji ile bajtów w pamięci zajmuje dany typ zmiennej, a powyższy opis przedstawia tylko zakres, którego możemy być pewni.
+Problem w tym wypadku polega przede wszystkim na zależności typów danych od implementacji i architektury.</p>
+<p>Norma ANSI C określa minimalne ilości batów zajmowanych przez każdy typ (jakiego minimalnego zakresu wartości możemy się spodziewać po danym typie).</p>
+<p>Jeśli programujesz w C na Arduino to może już zauważyłeś, że różne płytki (z innymi mikrokontrolerami) mogą mieć różne zakresy dla typu <code>int</code> (jak i kilku pozostałych typów liczb).</p>
+<p>Na płytce Arduino Uno <code>int</code> przechowuje wartości od <span class="math inline">\(-32 768\)</span> do <span class="math inline">\(32 767\)</span>, czyli ma długość 2-bajtów, a w Arduino MKR 1010 <code>int</code> zajmuje przestrzeń 4 bajtów (zakres od <span class="math inline">\(-2 147 483 648\)</span> do <span class="math inline">\(2 147 483 647\)</span>).
+Jak widać to całkiem spora różnica.</p>
+<p>Na wszystkich płytklach Arduino typ <code>short</code> zajmuje 2 bajty (od <span class="math inline">\(-32 768\)</span> do <span class="math inline">\(32 767\)</span>), <code>long</code> 4 bajty (od <span class="math inline">\(-2 147 483 648\)</span> do <span class="math inline">\(2 147 483 647\)</span>).</p>
+</div>
+<div id="kwalifikator-unsigned" class="section level2">
+<h2><span class="header-section-number">2.2</span> Kwalifikator <code>unsigned</code></h2>
+<p>Do wszystkich typów danych liczbowych z poprzedniego rozdziału można dodać słowo kluczowe <code>unsigned</code> co sprawi, że zakres będzie rozpoczynał się od 0. Taka liczba zawsze będzie nieujemna. W wielu przypadkach może to mieć sens.</p>
+<ul>
+<li><code>unsigned char</code> w zakresie od 0 do przynajmniej <span class="math inline">\(255\)</span></li>
+<li><code>unsigned int</code> w zakresie od 0 do przynajmniej <span class="math inline">\(65,535\)</span></li>
+<li><code>unsigned short</code> w zakresie od 0 do przynajmniej <span class="math inline">\(65,535\)</span></li>
+<li><code>unsigned long</code> w zakresie od 0 do przynajmniej <span class="math inline">\(4,294,967,295\)</span></li>
+</ul>
+</div>
+<div id="problem-przepełnienia-ang.-overflow" class="section level2">
+<h2><span class="header-section-number">2.3</span> Problem przepełnienia (ang. overflow)</h2>
+<p>Mając na uwadze wszystkie wspomniane limity wypada zadać sobie pytanie: Jak możemy się upewnić, że nasze liczby nie przekroczą swoich limitów?
+Najpierw jednak odpowiedzmy sobie na pytanie: Co się stanie, jeśli przekroczymy limit?</p>
+<p>Jeśli masz liczbę nieujemną typu <code>unsigned int</code> o wartości 255 i inkrementujesz ją, otrzymasz wartość 256.
+Zgodnie z oczekiwaniami.
+Jeśli masz liczbę nieujemną typu <code>unsigned char</code> o wartości 255 i zwiększysz ją o 1 (jak w poprzednim przykładzie), otrzymasz wartość 0.
+Po pokonaniu górnego limitu jakim jest 255 liczba tego typu resetuje się, zaczynając od dolnego limitu wartości.</p>
+<p>Jeśli masz liczbę typu <code>unsigned char</code> z zapisaną liczbą 255 i dodasz do niej 10, otrzymasz liczbę 9:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb9-1" title="1"><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></a>
+<a class="sourceLine" id="cb9-2" title="2"></a>
+<a class="sourceLine" id="cb9-3" title="3"><span class="dt">int</span> main(<span class="dt">void</span>) {</a>
+<a class="sourceLine" id="cb9-4" title="4">  <span class="dt">unsigned</span> <span class="dt">char</span> j = <span class="dv">255</span>;</a>
+<a class="sourceLine" id="cb9-5" title="5">  j = j + <span class="dv">10</span>;</a>
+<a class="sourceLine" id="cb9-6" title="6">  printf(<span class="st">&quot;%u&quot;</span>, j); <span class="co">/* 9 */</span></a>
+<a class="sourceLine" id="cb9-7" title="7">}</a></code></pre></div>
+<p>Natomiast gdy twoja zmienna jest oznakowanego typu (bez słowa kluczowego <code>unsigned</code>) i przekroczysz granicę danego typu, np. dodasz 10 do zmiennej typu <code>char</code>, której wartość była równa górnemu limitowi, to wypisując ją na ekran za pomocą formatu <code>%u</code> (formatowanie liczby <code>unsigned</code>) ujrzymy na wyjściu coś, co nazywamy niezdefiniowanym zachowaniem (ang. undefined behavior). Zasadniczo funkcja <code>printf()</code> wypisze ogromną liczbę, która w zależności od implamentacji i architektury może się różnić:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb10-1" title="1"><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></a>
+<a class="sourceLine" id="cb10-2" title="2"></a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="dt">int</span> main(<span class="dt">void</span>) {</a>
+<a class="sourceLine" id="cb10-4" title="4">  <span class="dt">char</span> j = <span class="dv">127</span>;</a>
+<a class="sourceLine" id="cb10-5" title="5">  j = j + <span class="dv">10</span>;</a>
+<a class="sourceLine" id="cb10-6" title="6">  printf(<span class="st">&quot;%u&quot;</span>, j); <span class="co">/* 4294967177 */</span></a>
+<a class="sourceLine" id="cb10-7" title="7">}</a></code></pre></div>
+<p>Innymi słowy, C nie chroni cię przed przekroczeniem limitów danego typu. Musisz sam się tym zająć.</p>
+<p>W przypadku C ,,niezdefiniowane zachowanie’’ (ang. undefined behavior) oznacza, że zachowanie nie jest opisane w standardzie, a to co dokładnie się stanie nie musi być opisane w dokumentacji danej implementacji C.</p>
+</div>
+<div id="ostrzeżenia-ang.-warnings-kompilatora-spowodowane-niejawną-konwersją-ang.-implicit-conversion" class="section level2">
+<h2><span class="header-section-number">2.4</span> Ostrzeżenia (ang. warnings) kompilatora spowodowane niejawną konwersją (ang. implicit conversion)</h2>
+<p>Kiedy zadeklarujesz zmienną i zainicjujesz ją z niewłaściwą wartością, kompilator <strong>gcc</strong> powinien wypisać ostrzeżenie:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb11-1" title="1"><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></a>
+<a class="sourceLine" id="cb11-2" title="2"></a>
+<a class="sourceLine" id="cb11-3" title="3"><span class="dt">int</span> main(<span class="dt">void</span>) {</a>
+<a class="sourceLine" id="cb11-4" title="4">  <span class="dt">char</span> j = <span class="dv">1000</span>;</a>
+<a class="sourceLine" id="cb11-5" title="5">}</a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" title="1"><span class="ex">hello.c</span>:4:11: warning: implicit conversion </a>
+<a class="sourceLine" id="cb12-2" title="2">  <span class="ex">from</span> <span class="st">&#39;int&#39;</span> to</a>
+<a class="sourceLine" id="cb12-3" title="3">      <span class="st">&#39;char&#39;</span> <span class="ex">changes</span> value from 1000 to -24</a>
+<a class="sourceLine" id="cb12-4" title="4">      [<span class="ex">-Wconstant-conversion</span>]</a>
+<a class="sourceLine" id="cb12-5" title="5">        <span class="ex">char</span> j = 1000<span class="kw">;</span></a>
+<a class="sourceLine" id="cb12-6" title="6">             <span class="ex">~</span>   ^<span class="ex">~~~</span></a>
+<a class="sourceLine" id="cb12-7" title="7"><span class="ex">1</span> warning generated.</a></code></pre></div>
+<p>również w przypadku bezpośredniego przypisania:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb13-1" title="1"><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></a>
+<a class="sourceLine" id="cb13-2" title="2"></a>
+<a class="sourceLine" id="cb13-3" title="3"><span class="dt">int</span> main(<span class="dt">void</span>) {</a>
+<a class="sourceLine" id="cb13-4" title="4">  <span class="dt">char</span> j;</a>
+<a class="sourceLine" id="cb13-5" title="5">  j = <span class="dv">1000</span>;</a>
+<a class="sourceLine" id="cb13-6" title="6">}</a></code></pre></div>
+<p>Nie dzieje się tak jednak w przypadku operacji arytmetycznych, np. <code>+=</code>:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb14-1" title="1"><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></a>
+<a class="sourceLine" id="cb14-2" title="2"></a>
+<a class="sourceLine" id="cb14-3" title="3"><span class="dt">int</span> main(<span class="dt">void</span>) {</a>
+<a class="sourceLine" id="cb14-4" title="4">  <span class="dt">char</span> j = <span class="dv">0</span>;</a>
+<a class="sourceLine" id="cb14-5" title="5">  j += <span class="dv">1000</span>;</a>
+<a class="sourceLine" id="cb14-6" title="6">}</a></code></pre></div>
+</div>
+<div id="liczby-zmiennoprzecinkowe-ang.-floating-point-numbers" class="section level2">
+<h2><span class="header-section-number">2.5</span> Liczby zmiennoprzecinkowe (ang. floating point numbers)</h2>
+<p>Typy zmiennoprzecinkowe mogą reprezentować znacznie większy zakres wartości niż liczby całkowite, a także mogą reprezentować ułamki, czego nie są w stanie liczby całkowite.</p>
+<p>Liczby zmiennoprzecinkowe reprezentuje się w notacji naukowej (ang. scientific notation).
+Jest to zapis dziesiętny, mała lub wielka litera E oraz wykładnik (potęgi liczby 10).</p>
+<p>Możesz więc zapisać liczbę zmiennoprzecinkową jak poniżej:</p>
+<ul>
+<li><span class="math inline">\(1.29e-3\)</span></li>
+<li><span class="math inline">\(-2.3e+5\)</span></li>
+</ul>
+<p>i na inne pozornie dziwne sposoby.</p>
+<p>Następujące typy:</p>
+<ul>
+<li><code>float</code></li>
+<li><code>double</code></li>
+<li><code>long double</code></li>
+</ul>
+<p>są używane do reprezentowania liczb rzeczywistych z przecinkiem dziesiętnym. Wszystkie reprezentują zarówno liczby dodatnie, jak i ujemne.</p>
+<p>Minimalne wymagania dla dowolnej implementacji C są takie, że <code>float</code> ma reprezentować zakres od <span class="math inline">\(10 ^ {-37}\)</span> do <span class="math inline">\(10 ^ {+ 37}\)</span> i zwykle jest implementowana przy użyciu 32 bitów. Liczba typu <code>double</code> może reprezentować większy zakres liczb, a <code>long double</code> jeszcze większy.</p>
+<p>Dokładne zakresy i rozmiary liczb zmiennoprzecinkowych, podobnie jak u liczb całkowitych, zależą od implementacji.
+Na współczesnym komputerze liczba zmiennoprzecinkowa jest reprezentowana za pomocą 32 bitów, ma precyzję 24 bitów (znak <span class="math inline">\(+/-\)</span> oraz mantysa), a 8 bitów służy do kodowania wykładnika potęgowego.
+Liczba <code>double</code> jest reprezentowana w 64 bitach, z dokładnością do 53 bitów znaczących i 11 bitów do kodowania potęgi.
+Typ <code>long double</code> jest reprezentowany w 80 bitach, ma precyzję 64 bitów znaczących oraz 15 bitów do kodowania potęgi.</p>
+<p>Aby na konkretnym komputerze sprawdzić rozmiar typów w bajtach można oczywiście napisać program:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb15-1" title="1"><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></a>
+<a class="sourceLine" id="cb15-2" title="2"></a>
+<a class="sourceLine" id="cb15-3" title="3"><span class="dt">int</span> main(<span class="dt">void</span>) {</a>
+<a class="sourceLine" id="cb15-4" title="4">  printf(<span class="st">&quot;char size: %lu bytes</span><span class="sc">\n</span><span class="st">&quot;</span>, <span class="kw">sizeof</span>(<span class="dt">char</span>));</a>
+<a class="sourceLine" id="cb15-5" title="5">  printf(<span class="st">&quot;int size: %lu bytes</span><span class="sc">\n</span><span class="st">&quot;</span>, <span class="kw">sizeof</span>(<span class="dt">int</span>));</a>
+<a class="sourceLine" id="cb15-6" title="6">  printf(<span class="st">&quot;short size: %lu bytes</span><span class="sc">\n</span><span class="st">&quot;</span>, <span class="kw">sizeof</span>(<span class="dt">short</span>));</a>
+<a class="sourceLine" id="cb15-7" title="7">  printf(<span class="st">&quot;long size: %lu bytes</span><span class="sc">\n</span><span class="st">&quot;</span>, <span class="kw">sizeof</span>(<span class="dt">long</span>));</a>
+<a class="sourceLine" id="cb15-8" title="8">  printf(<span class="st">&quot;float size: %lu bytes</span><span class="sc">\n</span><span class="st">&quot;</span>, <span class="kw">sizeof</span>(<span class="dt">float</span>));</a>
+<a class="sourceLine" id="cb15-9" title="9">  printf(<span class="st">&quot;double size: %lu bytes</span><span class="sc">\n</span><span class="st">&quot;</span>, <span class="kw">sizeof</span>(<span class="dt">double</span>));</a>
+<a class="sourceLine" id="cb15-10" title="10">  printf(<span class="st">&quot;long double size: %lu bytes</span><span class="sc">\n</span><span class="st">&quot;</span>, <span class="kw">sizeof</span>(<span class="dt">long</span> <span class="dt">double</span>));</a>
+<a class="sourceLine" id="cb15-11" title="11">}</a></code></pre></div>
+<p>którego wynik może być następujący:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb16-1" title="1"><span class="ex">char</span> size: 1 bytes</a>
+<a class="sourceLine" id="cb16-2" title="2"><span class="ex">int</span> size: 4 bytes</a>
+<a class="sourceLine" id="cb16-3" title="3"><span class="ex">short</span> size: 2 bytes</a>
+<a class="sourceLine" id="cb16-4" title="4"><span class="ex">long</span> size: 8 bytes</a>
+<a class="sourceLine" id="cb16-5" title="5"><span class="ex">float</span> size: 4 bytes</a>
+<a class="sourceLine" id="cb16-6" title="6"><span class="ex">double</span> size: 8 bytes</a>
+<a class="sourceLine" id="cb16-7" title="7"><span class="ex">long</span> double size: 16 bytes</a></code></pre></div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="wprowadzenie-do-c.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sta-e-ang-constants.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"search": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
