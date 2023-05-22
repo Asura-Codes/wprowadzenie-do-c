@@ -4,19 +4,19 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Rozdział 4 Operatory | _main.knit</title>
+  <title>Page not found | _main.knit</title>
   <meta name="description" content="Skrypt dla początkujących<br />
 <strong>Poznaj C w ciągu kilku godzin</strong></div>" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Rozdział 4 Operatory | _main.knit" />
+  <meta property="og:title" content="Page not found | _main.knit" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="Asura-Codes/CheetSheets" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Rozdział 4 Operatory | _main.knit" />
+  <meta name="twitter:title" content="Page not found | _main.knit" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="stałe-ang.-constants.html"/>
-<link rel="next" href="instrukcje-warunkowe-ang.-conditionals.html"/>
+
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -223,291 +223,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="operatory" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Rozdział 4</span> Operatory<a href="operatory.html#operatory" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>C oferuje nam szeroką gamę operatorów, których możemy używać do operowania na danych.</p>
-<p>W C wyróżniamy następujące rodzaje operatorów:</p>
-<ul>
-<li>operatory arytmetyczne (ang. arithmetic operators)</li>
-<li>operatory relacji (ang. comparison operators)</li>
-<li>operatory logiczne (ang. logical operators)</li>
-<li>złożone operatory przypisania (ang. compound assignment operators)</li>
-<li>operatory bitowe (ang. bitwise operators)</li>
-<li>operatory wyłuskania (ang. pointer operators)</li>
-<li>operatory selekcji (ang. structure operators)</li>
-<li>operatory różne (ang. miscellaneous operators)</li>
-</ul>
-<p>W tej sekcji opiszę te operatory na przykładach używając dwóch nazw zmiennych: <code>a</code> i <code>b</code>.</p>
-<p>Operatory bitowe, selekcji i wyłuskania zostaną opisane w dalszych sekcjach niniejszego skryptu.</p>
-<div id="operatory-arytmetyczne" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> Operatory arytmetyczne<a href="operatory.html#operatory-arytmetyczne" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Operatory arytmetyczne służą do wykonywania operacji arytmetycznych, czyli mnożenia, dzielenia, dodawania, odejmowania itp. Występują w tej grupie również takie operatory jak operator inkrementacji i dekrementacji oraz operatory znaku wartości.</p>
-<p>Operatory można podzielić na operatory dwuargumentowe i operatory jednoargumentowe, np. <code>*</code>, <code>/</code>, <code>%</code> są dwuargumentowe, natomiast <code>++</code>, <code>--</code> są jednoargumentowe ale operatory <code>+</code>, <code>-</code> należą do obu tych grup.</p>
-<p>Operatory dwuargumentowe działają przy użyciu dwóch operandów:</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center">Operator</th>
-<th align="left">Nazwa</th>
-<th align="left">Przykład</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><code>=</code></td>
-<td align="left">przypisanie</td>
-<td align="left"><code>a = b</code></td>
-</tr>
-<tr class="even">
-<td align="center"><code>+</code></td>
-<td align="left">dodawanie</td>
-<td align="left"><code>a + b</code></td>
-</tr>
-<tr class="odd">
-<td align="center"><code>-</code></td>
-<td align="left">odejmowanie</td>
-<td align="left"><code>a - b</code></td>
-</tr>
-<tr class="even">
-<td align="center"><code>*</code></td>
-<td align="left">mnożenie</td>
-<td align="left"><code>a * b</code></td>
-</tr>
-<tr class="odd">
-<td align="center"><code>/</code></td>
-<td align="left">dzielenie</td>
-<td align="left"><code>a / b</code></td>
-</tr>
-<tr class="even">
-<td align="center"><code>%</code></td>
-<td align="left">reszta z dzielenia</td>
-<td align="left"><code>a % b</code></td>
-</tr>
-</tbody>
-</table>
-<p>Operatory jednoargumentowe przyjmują tylko jeden operand:</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center">Operator</th>
-<th align="left">Nazwa</th>
-<th align="left">Przykład</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><code>+</code></td>
-<td align="left">plus jednoargumentowy</td>
-<td align="left"><code>+a</code></td>
-</tr>
-<tr class="even">
-<td align="center"><code>-</code></td>
-<td align="left">minus jednoargumentowy</td>
-<td align="left"><code>-a</code></td>
-</tr>
-<tr class="odd">
-<td align="center"><code>++</code></td>
-<td align="left">inkrementacja</td>
-<td align="left"><code>a++</code> lub <code>++a</code></td>
-</tr>
-<tr class="even">
-<td align="center"><code>--</code></td>
-<td align="left">dekrementacja</td>
-<td align="left"><code>a--</code> lub <code>--a</code></td>
-</tr>
-</tbody>
-</table>
-<p>Różnica między <code>a++</code>, a <code>++a</code> polega na tym, że <code>a++</code> zwiększa wartość zmiennej po jej użyciu, natomiast <code>++a</code> inkrementuje zmienną przed jej użyciem.</p>
-<p>Na przykład:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb20-1"><a href="operatory.html#cb20-1" tabindex="-1"></a><span class="dt">int</span> a <span class="op">=</span> <span class="dv">2</span><span class="op">;</span></span>
-<span id="cb20-2"><a href="operatory.html#cb20-2" tabindex="-1"></a><span class="dt">int</span> b<span class="op">;</span></span>
-<span id="cb20-3"><a href="operatory.html#cb20-3" tabindex="-1"></a>b <span class="op">=</span> a<span class="op">++</span> <span class="co">/* b = 2, a = 3 */</span></span>
-<span id="cb20-4"><a href="operatory.html#cb20-4" tabindex="-1"></a>b <span class="op">=</span> <span class="op">++</span>a <span class="co">/* b = 4, a = 4 */</span></span></code></pre></div>
-<p>To samo dotyczy operatora dekrementacji.</p>
-</div>
-<div id="operatory-relacji" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Operatory relacji<a href="operatory.html#operatory-relacji" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<table>
-<thead>
-<tr class="header">
-<th align="center">Operator</th>
-<th align="left">Nazwa</th>
-<th align="left">Przykład</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><code>==</code></td>
-<td align="left">równe</td>
-<td align="left"><code>a == b</code></td>
-</tr>
-<tr class="even">
-<td align="center"><code>!=</code></td>
-<td align="left">różne</td>
-<td align="left"><code>a != b</code></td>
-</tr>
-<tr class="odd">
-<td align="center"><code>&gt;</code></td>
-<td align="left">większe</td>
-<td align="left"><code>a &gt; b</code></td>
-</tr>
-<tr class="even">
-<td align="center"><code>&lt;</code></td>
-<td align="left">mniejsze</td>
-<td align="left"><code>a &lt; b</code></td>
-</tr>
-<tr class="odd">
-<td align="center"><code>&gt;=</code></td>
-<td align="left">większe lub równe</td>
-<td align="left"><code>a &gt;= b</code></td>
-</tr>
-<tr class="even">
-<td align="center"><code>&lt;=</code></td>
-<td align="left">mniejsze lub równe</td>
-<td align="left"><code>a &lt;= b</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="operatory-logiczne" class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> Operatory logiczne<a href="operatory.html#operatory-logiczne" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<table>
-<thead>
-<tr class="header">
-<th align="center">Operator</th>
-<th align="left">Nazwa</th>
-<th align="left">Przykład</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><code>!</code></td>
-<td align="left">NOT</td>
-<td align="left"><code>!a</code></td>
-</tr>
-<tr class="even">
-<td align="center"><code>&amp;&amp;</code></td>
-<td align="left">AND</td>
-<td align="left"><code>a &amp;&amp; b</code></td>
-</tr>
-<tr class="odd">
-<td align="center"><code>||</code></td>
-<td align="left">OR</td>
-<td align="left"><code>a || b</code></td>
-</tr>
-</tbody>
-</table>
-<p>Operatory te świetnie sprawdzają się do pracy z wartościami logicznymi.</p>
-</div>
-<div id="złożone-operatory-przypisania" class="section level2 hasAnchor" number="4.4">
-<h2><span class="header-section-number">4.4</span> Złożone operatory przypisania<a href="operatory.html#złożone-operatory-przypisania" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Operatory te upraszczają wykonanie przypisania z jednocześnym wykonaniem operacji arytmetycznej:</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center">Operator</th>
-<th align="left">Nazwa</th>
-<th align="center">Przykład</th>
-<th align="center">Wyrażenie równoważne</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><code>+=</code></td>
-<td align="left">dodawanie</td>
-<td align="center"><code>a += b</code></td>
-<td align="center"><code>a = a + b</code></td>
-</tr>
-<tr class="even">
-<td align="center"><code>-=</code></td>
-<td align="left">odejmowanie</td>
-<td align="center"><code>a -= b</code></td>
-<td align="center"><code>a = a - b</code></td>
-</tr>
-<tr class="odd">
-<td align="center"><code>*=</code></td>
-<td align="left">mnożenie</td>
-<td align="center"><code>a *= b</code></td>
-<td align="center"><code>a = a * b</code></td>
-</tr>
-<tr class="even">
-<td align="center"><code>/=</code></td>
-<td align="left">dzielenie</td>
-<td align="center"><code>a /= b</code></td>
-<td align="center"><code>a = a / b</code></td>
-</tr>
-<tr class="odd">
-<td align="center"><code>%=</code></td>
-<td align="left">reszta z dzielenia</td>
-<td align="center"><code>a %= b</code></td>
-<td align="center"><code>a = a % b</code></td>
-</tr>
-</tbody>
-</table>
-<p>Jak widać zapis w kolumnie ,,przykład’’ jest krótszy niż w kolumnie ,,wyrażenie równoważne’’ i moim zdaniem łatwiejszy do przeczytania.</p>
-</div>
-<div id="operator-trójoperandowy-ang.-ternary-operator" class="section level2 hasAnchor" number="4.5">
-<h2><span class="header-section-number">4.5</span> Operator trójoperandowy (ang. ternary operator)<a href="operatory.html#operator-trójoperandowy-ang.-ternary-operator" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Operator trójskładnikowy (inna nazwa) jest jedynym operatorem w C, który współpracuje z 3 operandami i jest to najkrótszy sposób na wyrażenie warunkowe.</p>
-<p>Wygląda on tak:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb21-1"><a href="operatory.html#cb21-1" tabindex="-1"></a><span class="op">&lt;</span>condition<span class="op">&gt;</span> <span class="op">?</span> <span class="op">&lt;</span>expression<span class="op">&gt;</span> <span class="op">:</span> <span class="op">&lt;</span>expression<span class="op">&gt;</span></span></code></pre></div>
-<p>gdzie <code>&lt;condition&gt;</code> to wyrażenie sprowadzające się do wartości logicznej (prawda lub fałsz), a <code>&lt;expression&gt;</code> to instrukcja.</p>
-<p>Przykład:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb22-1"><a href="operatory.html#cb22-1" tabindex="-1"></a>a <span class="op">?</span> b <span class="op">:</span> c</span></code></pre></div>
-<p>Jeśli z <code>a</code> wynika wartość logiczna <code>true</code>, wówczas wykonywana jest instrukcja <code>b</code>, w przeciwnym razie <code>c</code>.</p>
-<p>Operator trójoperandowy jest funkcjonalnie taki sam jak <code>if / else</code>, ale jest krótszy i może zostać wstawiony do wyrażenia, ponieważ zwraca wynik instrukcji <code>b</code> lub <code>c</code>.</p>
-</div>
-<div id="sizeof" class="section level2 hasAnchor" number="4.6">
-<h2><span class="header-section-number">4.6</span> <code>sizeof</code><a href="operatory.html#sizeof" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Operator <code>sizeof</code> przyjmuje jeden parametr i zwraca jego rozmiar w bajtach. Możesz przekazać zmienną, a nawet typ.</p>
-<p>Przykładowe użycie:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb23-1"><a href="operatory.html#cb23-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
-<span id="cb23-2"><a href="operatory.html#cb23-2" tabindex="-1"></a></span>
-<span id="cb23-3"><a href="operatory.html#cb23-3" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb23-4"><a href="operatory.html#cb23-4" tabindex="-1"></a>  <span class="dt">int</span> age <span class="op">=</span> <span class="dv">37</span><span class="op">;</span></span>
-<span id="cb23-5"><a href="operatory.html#cb23-5" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;</span><span class="sc">%ld\n</span><span class="st">&quot;</span><span class="op">,</span> <span class="kw">sizeof</span><span class="op">(</span>age<span class="op">));</span></span>
-<span id="cb23-6"><a href="operatory.html#cb23-6" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;</span><span class="sc">%ld</span><span class="st">&quot;</span><span class="op">,</span> <span class="kw">sizeof</span><span class="op">(</span><span class="dt">int</span><span class="op">));</span></span>
-<span id="cb23-7"><a href="operatory.html#cb23-7" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-</div>
-<div id="priorytety-operatorów" class="section level2 hasAnchor" number="4.7">
-<h2><span class="header-section-number">4.7</span> Priorytety operatorów<a href="operatory.html#priorytety-operatorów" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Przy wszystkich operatorach (również nieopisanych do tej pory) musimy zwracać uwagę na ich priorytet podczas ich użycia w jednym wyrażeniu.</p>
-<p>Przykładowo:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb24-1"><a href="operatory.html#cb24-1" tabindex="-1"></a><span class="dt">int</span> a <span class="op">=</span> <span class="dv">2</span><span class="op">;</span></span>
-<span id="cb24-2"><a href="operatory.html#cb24-2" tabindex="-1"></a><span class="dt">int</span> b <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span>
-<span id="cb24-3"><a href="operatory.html#cb24-3" tabindex="-1"></a><span class="dt">int</span> c <span class="op">=</span> b <span class="op">+</span> a <span class="op">*</span> a <span class="op">/</span> b <span class="op">-</span> a<span class="op">;</span></span></code></pre></div>
-<p>Jaka jest wartość zmiennej <code>c</code>?
-Czy dodawanie jest wykonywane przed mnożeniem i dzieleniem?
-Istnieje określony zbiór zasad, które odpowiedzą na te pytania.</p>
-<p>Priorytet to nic innego jak pierwszeństwo w wykonywaniu działań.
-Poniżej zapisałem działania pod względem pierwszeństwa rosnąco:</p>
-<ul>
-<li><code>=</code> operator przypisania</li>
-<li><code>+</code> i <code>-</code> operator dodawania/odejmowania</li>
-<li><code>*</code> i <code>/</code> operator mnożenia/dzielenia</li>
-<li><code>+</code> i <code>-</code> liczba dodatnia/ujemna (operator znaku liczby)</li>
-</ul>
-<p>Jak widać jest to zgodne z intuicją z jednym zastrzeżeniem, operatory dodatkowo podlegają łączności, która mówi o tym, że działania o tym samym priorytecie zawsze wykonywane są od lewej do prawej (z wyjątkiem operatorów jednoargumentowych i przypisania).</p>
-<p>W linii:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb25-1"><a href="operatory.html#cb25-1" tabindex="-1"></a><span class="dt">int</span> c <span class="op">=</span> b <span class="op">+</span> a <span class="op">*</span> a <span class="op">/</span> b <span class="op">-</span> a<span class="op">;</span></span></code></pre></div>
-<p>najpierw wykonane zostanie działanie <code>a * a / b</code>, które ze względu na ten sam priorytet wykona się od lewej do prawej co znaczy, że najpierw wystąpi mnożenie <code>a * a</code>, później <code>/ b</code>, w tym wypadku <span class="math inline">\(2 * 2 = 4\)</span> oraz <span class="math inline">\(4/4 = 1\)</span>.
-Następnie sumowanie i odejmowanie <span class="math inline">\(4 + 1 - 2\)</span>.
-Wartość <span class="math inline">\(c\)</span> wynosi więc <span class="math inline">\(3\)</span>.</p>
-<p>Używając określonego typu wypada również uważać podczas zapisu działań. Jeśli zamiast zapisu <code>a * a / b</code> użylibyśmy <code>a / b * a</code> (co powinno dać ten sam rezultat) to byśmy się zdziwili, ponieważ <code>a / b</code>, czyli <span class="math inline">\(2 / 4\)</span> będzie równe <span class="math inline">\(0\)</span> dla typu <code>int</code> (obcina część ułamkową liczby).</p>
-<p>Chciałbym jeszcze dodać, że możesz używać nawiasów, dzięki temu działania zawsze wykonają się w takiej kolejności jakiej będziejsz chciał oraz uczynią wyrażenie łatwiejszym do odczytania i zrozumienia.
-Nawiasy <code>()</code> zawsze mają wyższy priorytet, wyższy niż cokolwiek innego.</p>
-<p>Powyższe przykładowe wyrażenie można przepisać jako:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb26-1"><a href="operatory.html#cb26-1" tabindex="-1"></a><span class="dt">int</span> c <span class="op">=</span> b <span class="op">+</span> <span class="op">((</span>a <span class="op">*</span> a<span class="op">)</span> <span class="op">/</span> b<span class="op">)</span> <span class="op">-</span> a<span class="op">;</span></span></code></pre></div>
-<p>i nie musimy już więcej myśleć o priorytetach.</p>
-</div>
+<div id="page-not-found" class="section level1">
+<h1>Page not found</h1>
+<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
+<p>You may want to try searching to find the page's new location, or use
+the table of contents to find the page you are looking for.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="stałe-ang.-constants.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="instrukcje-warunkowe-ang.-conditionals.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
